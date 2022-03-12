@@ -1,6 +1,6 @@
-Pipeline 
+pipeline 
 {
-	agent any{
+	agent any
 		stages{
 			stage('Build Application'){
 				Steps{
@@ -18,5 +18,4 @@ Pipeline
 					}
 			}
 		}
-	}
 }
