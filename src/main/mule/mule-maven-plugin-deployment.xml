@@ -17,7 +17,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 output application/json
 ---
 {
-	"Message": "mule-maven-plugin-deployment"
+	"Message": "mule-maven-plugin-deployment to check Automatic build Trigger"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
