@@ -23,7 +23,7 @@ pipeline
 		
 		stage('Deploy Application to Mulesoft Cloudhub'){
 			steps{
-				bat 'mvn package deploy -DskipTests -Ptest -DmuleDeploy'
+				bat 'mvn package deploy %M2SETTINGS% -DskipTests -Ptest -DmuleDeploy'
 				}
 		}
 		
