@@ -2,13 +2,19 @@ pipeline{
 	agent any{
 		stages{
 			stage('Build Application'){
-				bat 'mvn clean install'
+				Steps{
+					bat 'mvn clean install'
+					}
 			}
 			stage('Munit Testing Application'){
-				bat 'mvn test'
+				steps{
+					bat 'mvn test'
+					}
 			}
 			stage('Deploy Application'){
-				bat 'mvn package deploy -Ptest -DmuleDeploy'
+				steps{
+					bat 'mvn package deploy -Ptest -DmuleDeploy'
+					}
 			}
 		}
 	}
