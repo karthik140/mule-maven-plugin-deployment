@@ -1,6 +1,7 @@
 {
   "configs": [
-    "mule-maven-plugin-deployment.xml"
+    "mule-maven-plugin-deployment.xml",
+    "mule-maven-plugin-deployment-test-suite.xml"
   ],
   "secureProperties": [],
   "redeploymentEnabled": true,
@@ -10,13 +11,16 @@
   "classLoaderModelLoaderDescriptor": {
     "id": "mule",
     "attributes": {
-      "exportedPackages": [],
       "exportedResources": [
+        "application-types.xml",
         "dev.yaml",
         "log4j2.xml",
         "mule-maven-plugin-deployment.xml",
-        "test.yaml"
-      ]
+        "test.yaml",
+        "log4j2-test.xml"
+      ],
+      "includeTestDependencies": "true",
+      "exportedPackages": []
     }
   },
   "bundleDescriptorLoader": {
