@@ -8,9 +8,10 @@
 		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
 		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
 	<munit:config name="mule-maven-plugin-deployment-test-suite.xml" />
+	<global-property doc:name="Global Property" doc:id="19678c12-6694-452f-91f0-d6df266fd9bb" name="env" value="test" />
 	<munit:test name="mule-maven-plugin-deployment-test-suite-mule-maven-plugin-deploymentFlow1Test" doc:id="944653eb-cb4a-4354-8314-894e76a1f313" description="Test">
 		<munit:execution >
-			<flow-ref doc:name="Flow-ref to mule-maven-plugin-deploymentFlow1" doc:id="5bd08ae1-2fbe-4210-a886-abd87710701f" name="mule-maven-plugin-deploymentFlow1"/>
+			<flow-ref doc:name="Flow-ref to mule-maven-plugin-deploymentFlow1" doc:id="5bd08ae1-2fbe-4210-a886-abd87710701f" name="mule-maven-plugin-deploymentFlow"/>
 		</munit:execution>
 		<munit:validation >
 			<munit-tools:assert doc:name="Assert expression" doc:id="b9ab71b2-0ef3-413a-bf44-f9c544bd5f2a" />

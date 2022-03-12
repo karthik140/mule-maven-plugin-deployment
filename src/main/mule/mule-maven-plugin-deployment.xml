@@ -22,16 +22,4 @@ output application/json
 			</ee:message>
 		</ee:transform>
 	</flow>
-	<flow name="mule-maven-plugin-deploymentFlow1" doc:id="a4b19a80-38a8-4ab0-9f82-854ca628be4d" >
-		<ee:transform doc:name="Copy_of_Transform Message" doc:id="43d43a5a-461f-468d-a6ed-abc11e1eeb18" >
-			<ee:message >
-				<ee:set-payload ><![CDATA[%dw 2.0
-output application/json
----
-{
-	"Message": "mule-maven-plugin-deployment to check Automatic build Trigger"
-}]]></ee:set-payload>
-			</ee:message>
-		</ee:transform>
-	</flow>
 </mule>
