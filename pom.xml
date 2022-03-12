@@ -88,8 +88,10 @@
 								<properties>
 									<http.port>8081</http.port>
 									<env>test</env>
-									<anypoint.platform.client_id>${anypoint.platform.client_id}</anypoint.platform.client_id>
-									<anypoint.platform.client_secret>${anypoint.platform.client_secret}</anypoint.platform.client_secret>
+									<anypoint.platform.client_id>03bc13e44a624718b26ab27811ca598d</anypoint.platform.client_id>
+									<anypoint.platform.client_secret>7BB96CFe5AC449368675DaA29ACBD030</anypoint.platform.client_secret>	
+									<!-- <anypoint.platform.client_id>${anypoint.platform.client_id}</anypoint.platform.client_id>
+									<anypoint.platform.client_secret>${anypoint.platform.client_secret}</anypoint.platform.client_secret> -->
 								</properties>
 							</cloudHubDeployment>
 						</configuration>

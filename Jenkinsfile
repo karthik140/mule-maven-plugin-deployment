@@ -3,7 +3,7 @@ pipeline
 	agent any
 	environment {
     //adding a comment for the commit test
-    //DEPLOY_CREDS = credentials('deploy-anypoint-user')
+    ANYPOINT_CREDS = credentials('ANYPOINT_CREDENTIALS')
     //MULE_VERSION = '4.4.0'
    // BG = "<BUSINESS-GROUP>"
    // WORKER = "Micro"
@@ -22,8 +22,12 @@ pipeline
 		}
 		
 		stage('Deploy Application to Mulesoft Cloudhub'){
+		environment {
+   			 CLIENT_ID = credentials('DEV_CLIENT_ID')
+   			 CLIENT_SECRET = credentials('DEV_CLIENT_SECRET')
+  		}
 			steps{
-				bat 'mvn package deploy %M2SETTINGS% -DskipTests -Ptest -DmuleDeploy'
+				bat 'mvn package deploy -DskipTests -Ptest -DmuleDeploy -Dusername="%ANYPOINT_CREDS_USR%" -Dpassword="%ANYPOINT_CREDS_PSW%" -Danypoint.platform.client_id="%CLIENT_ID%" -Danypoint.platform.client_secret="%CLIENT_SECRET%"                                '
 				}
 		}
 		
